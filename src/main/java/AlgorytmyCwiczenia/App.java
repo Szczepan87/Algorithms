@@ -8,12 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        int[] array = new int[]{1, 58 , 25, 23, 24, 1, 5};
-        InsertionSort insertionSort = new InsertionSort();
-        insertionSort.insertSort(array);
-        for (int i : array) {
-            System.out.print(i + "  ");
-        }
+        double[] array = new double[]{1, 58 , 25, 23, 24, 1, 5};
+
+        System.out.print(SimpleAlgorithm.searchInArrFor(10, array));
+
 
     }
 }

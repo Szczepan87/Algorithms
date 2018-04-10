@@ -1,5 +1,7 @@
 package AlgorytmyCwiczenia;
 
+import java.util.Arrays;
+
 public class SimpleAlgorithm {
 
     static double absoluteValue(double x){
@@ -48,4 +50,36 @@ public class SimpleAlgorithm {
         return counter;
     }
 
+    static boolean searchInArrFor(double element, double arr[]){
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == element)
+                return true;
+        }
+        return false;
+    }
+
+    static boolean binarySearch(double element, double arr[]){
+        Arrays.sort(arr);
+
+        int start = 0;
+        int end = arr.length;
+        int half = (start + end) /2;
+
+        while (start < end) {
+            for (int i = start; i < end; i++) {
+                if (arr[half] == element)
+                    return true;
+                else if (arr[half] > element) {
+                    end = half - 1;
+                    binarySearch(element,arr);
+                }
+                else if (arr[half] < element) {
+                    start = half + 1;
+                    binarySearch(element,arr);
+                }
+            }
+        }
+        return false;
+    }
 }
