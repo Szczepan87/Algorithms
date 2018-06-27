@@ -1,25 +1,27 @@
 package AlgorytmyCwiczenia.ArraysExc;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class OrderedSequence {
 
-    public int[] findFor(int[] arr){
+    public int[] findFor(int[] arr) {
 
         List<Integer> orderedSequence = new ArrayList<>();
 
 
         for (int i = 0; i < arr.length; i++) {
-            if ((i+1)>= arr.length) {
+            if ((i + 1) >= arr.length) {
                 break;
             }
-            if ((arr[i]+1) == arr[i+1]){
+            if ((arr[i] + 1) == arr[i + 1]) {
+                orderedSequence.add(Integer.valueOf(arr[i]));
+            } else if ((arr[i] - 1) == arr[i - 1]) {
                 orderedSequence.add(Integer.valueOf(arr[i]));
             }
-            else if ((arr[i]-1) == arr[i-1]) {
-                orderedSequence.add(Integer.valueOf(arr[i]));
-            }
+            if (i > 0 && orderedSequence.get(i).equals(orderedSequence.get(i - 1)))
+                orderedSequence.remove(i - 1);
         }
 
         int[] orderedSequenceArr = new int[orderedSequence.size()];
@@ -27,6 +29,7 @@ public class OrderedSequence {
         for (int i = 0; i < orderedSequence.size(); i++) {
             orderedSequenceArr[i] = orderedSequence.get(i).intValue();
         }
+
 
         return orderedSequenceArr;
     }
