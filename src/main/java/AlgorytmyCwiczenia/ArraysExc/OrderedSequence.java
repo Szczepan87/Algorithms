@@ -15,13 +15,16 @@ public class OrderedSequence {
             if ((i + 1) >= arr.length) {
                 break;
             }
+            //czy następny element jest o jeden większy, czyli jest w polejności
             if ((arr[i] + 1) == arr[i + 1]) {
                 orderedSequence.add(Integer.valueOf(arr[i]));
-            } else if ((arr[i] - 1) == arr[i - 1]) {
+            }
+            //czy poprzeni element jest o 1 mniejszy czyli jest w kolejności
+            else if ((arr[i] - 1) == arr[i - 1]) {
                 orderedSequence.add(Integer.valueOf(arr[i]));
             }
-            if (i > 0 && orderedSequence.get(i).equals(orderedSequence.get(i - 1)))
-                orderedSequence.remove(i - 1);
+            if ((i-1) > 0 && arr[i-1] == orderedSequence.get(orderedSequence.size()-1))
+                orderedSequence.remove(orderedSequence.size()-1);
         }
 
         int[] orderedSequenceArr = new int[orderedSequence.size()];
