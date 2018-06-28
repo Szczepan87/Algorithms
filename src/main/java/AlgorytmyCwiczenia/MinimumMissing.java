@@ -10,15 +10,13 @@ public class MinimumMissing {
 
         int searched = 1;
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < A.length;) {
             if (i>=A.length)
                 break;
             if (A[i] + 1 == A[i+1]){
-                searched = A[i];
-                if (A[i]==A[A.length-1])
-                    break;
-            }
+                i++;
+            } else searched = A[i] + 1;
         }
-        return searched+1;
+        return searched;
     }
 }
