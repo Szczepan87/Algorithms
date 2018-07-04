@@ -2,7 +2,9 @@ package AlgorytmyCwiczenia.ArraysExc;
 
 public class Unique {
 
-    /**Znajduje pierwszy unikalny element w tablicy*/
+    /**
+     * Znajduje pierwszy unikalny element w tablicy
+     */
     public static double find(double[] arr) {
 
         double unique = 0;
