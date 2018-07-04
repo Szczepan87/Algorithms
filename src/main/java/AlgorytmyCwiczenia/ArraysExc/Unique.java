@@ -14,12 +14,13 @@ public class Unique {
 
             for (int j = i + 1; j < arr.length; j++) {
 
-                if (arr[i] == arr[j]) {
+                if (i != j && arr[i] == arr[j]) {
                     sameNo = true;
                     break;
                 }
+                else sameNo = false;
             }
-            if (sameNo == false)
+            if (!sameNo)
                 unique = arr[i];
         }
         return unique;
