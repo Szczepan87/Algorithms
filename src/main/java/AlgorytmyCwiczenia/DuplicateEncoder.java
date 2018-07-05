@@ -10,13 +10,20 @@ public class DuplicateEncoder {
 
         char[] encoded = word.toCharArray();
 
-        for (int i = 0; i < encoded.length; i++) {
 
-            for (int j = 0; j < encoded.length; j++) {
-                if (encoded[i] == encoded[j])
-                    encoded[i] = ')';
-                else encoded[i] = '(';
+        for (int i = 0; i < encoded.length; i++) {
+            boolean isSameLetter = false;
+
+            for (int j = i+1; j < encoded.length; j++) {
+
+                if (encoded[i] == encoded[j]) {
+                    isSameLetter = true;
+                    break;
+                }
             }
+            if(isSameLetter)
+                encoded[i] = ')';
+            else encoded[i] = '(';
         }
 
         return String.copyValueOf(encoded);

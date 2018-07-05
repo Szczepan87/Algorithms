@@ -18,6 +18,7 @@ public class SortOddsInArray {
         List<Integer> oddsToSort = new ArrayList<>();
         List<Integer> indexesOfEvens = new ArrayList<>();
 
+        //odsiewanie nieparzystych z tablicy i zapamiętanie indeksów liczb parzystych
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 != 0)
                 oddsToSort.add(array[i]);
@@ -29,6 +30,7 @@ public class SortOddsInArray {
 
         int j = 0;
 
+        //przepisywanie tablicy - liczby parzyste zostają na swoich miejscach
         for (int i = 0; i < array.length;i++) {
             if (indexesOfEvens.contains(i))
                 continue;

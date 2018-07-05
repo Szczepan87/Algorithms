@@ -29,4 +29,17 @@ public class AnagramTest {
         Anagram k = new Anagram();
         assertTrue(k.isAnagram("Twoo", "Woot"));
     }
+
+    @Test
+    public void test4() {
+        Anagram k = new Anagram();
+        assertFalse(k.isAnagram("",""));
+    }
+
+    @Test
+    public void test5() {
+        Anagram k = new Anagram();
+        assertTrue(k.isAnagram("a","a"));
+
+    }
 }

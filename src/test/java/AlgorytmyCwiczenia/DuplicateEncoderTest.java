@@ -7,32 +7,32 @@ import static org.junit.Assert.*;
 public class DuplicateEncoderTest {
 
     @Test
-    public void test1() {
+    public void spacesTest() {
         assertEquals("))))())))", DuplicateEncoder.encode("   ()(   "));
     }
 
     @Test
-    public void test2() {
+    public void shortAllDiff() {
         assertEquals("(((", DuplicateEncoder.encode("din"));
     }
 
     @Test
-    public void test3() {
+    public void almostEveryOtherSameLong() {
         assertEquals(")()())()(()()(", DuplicateEncoder.encode("Prespecialized"));
     }
 
     @Test
-    public void test4() {
+    public void everyOtherSameShort() {
         assertEquals("()()()", DuplicateEncoder.encode("recede"));
     }
 
     @Test
-    public void test5() {
+    public void sameLetterNextToEachOther() {
         assertEquals(")())())", DuplicateEncoder.encode("Success"));
     }
 
     @Test
-    public void test6() {
+    public void nonLettersTest() {
         assertEquals("))((", DuplicateEncoder.encode("(( @"));
     }
 }

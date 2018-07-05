@@ -1,5 +1,9 @@
 package AlgorytmyCwiczenia.ArraysExc;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Unique {
 
     /**
@@ -8,20 +12,17 @@ public class Unique {
     public static double find(double[] arr) {
 
         double unique = 0;
-        boolean sameNo = false;
+        int counter = 0;
+
+        //List<Double> doubleList =new ArrayList<Double>(Arrays.asList(arr));
 
         for (int i = 0; i < arr.length; i++) {
 
-            for (int j = i + 1; j < arr.length; j++) {
-
-                if (i != j && arr[i] == arr[j]) {
-                    sameNo = true;
-                    break;
-                }
-                else sameNo = false;
-            }
-            if (!sameNo)
-                unique = arr[i];
+            if (Arrays.asList(arr).contains(arr[i]))
+                counter++;
+            if (counter<1)
+                continue;
+            else unique = arr[i];
         }
         return unique;
     }
