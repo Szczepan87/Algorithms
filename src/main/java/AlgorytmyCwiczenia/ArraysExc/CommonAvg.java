@@ -1,6 +1,5 @@
 package AlgorytmyCwiczenia.ArraysExc;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class CommonAvg {
     /**
@@ -8,6 +7,6 @@ public class CommonAvg {
      */
     public static int[] findIn(int[] arr) {
 
-        throw new NotImplementedException();
+        return arr;
     }
 }
