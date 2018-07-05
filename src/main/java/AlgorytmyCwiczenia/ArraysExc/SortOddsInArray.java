@@ -12,11 +12,11 @@ public class SortOddsInArray {
      */
     public static int[] sortArray(int[] array) {
 
+        if (array == null || array.length < 1)
+            return array;
+
         List<Integer> oddsToSort = new ArrayList<>();
         List<Integer> indexesOfEvens = new ArrayList<>();
-
-        if (array == null || array.length == 0)
-            return array;
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 != 0)
@@ -27,14 +27,17 @@ public class SortOddsInArray {
 
         Collections.sort(oddsToSort);
 
-        for (int i = 0; i < array.length;) {
+        int j = 0;
+
+        for (int i = 0; i < array.length;i++) {
             if (indexesOfEvens.contains(i))
-                i++;
+                continue;
             else //przepisz z nieparzystych
-                for (int j = 0; j < oddsToSort.size(); j++) {
+                while (j < oddsToSort.size()) {
                     array[i] = oddsToSort.get(j);
-                    i++;
+                    break;
                 }
+                j++;
         }
         return array;
     }
