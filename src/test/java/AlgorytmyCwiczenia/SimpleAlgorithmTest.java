@@ -2,6 +2,8 @@ package AlgorytmyCwiczenia;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class SimpleAlgorithmTest {
@@ -55,24 +57,28 @@ public class SimpleAlgorithmTest {
     @Test
     public void binarySearchTest() {
         double[] array = new double[]{25, 5, -5, 0, 25};
+        Arrays.sort(array);
         assertTrue(SimpleAlgorithm.binarySearch(5, array, 0, array.length));
     }
 
     @Test
     public void binarySearchForNonExistentTest() {
         double[] array = new double[]{25, 5, -5, 0, 25};
+        Arrays.sort(array);
         assertFalse(SimpleAlgorithm.binarySearch(-18, array, 0, array.length));
     }
 
     @Test
     public void binarySearchForGraterThanHalfTest() {
         double[] array = new double[]{25, 5, -5, 0, 25};
+        Arrays.sort(array);
         assertTrue(SimpleAlgorithm.binarySearch(0, array, 0, array.length));
     }
 
     @Test
     public void binarySearchForLessThanHalfTest() {
         double[] array = new double[]{25, 5, -5, 0, 25};
+        Arrays.sort(array);
         assertTrue(SimpleAlgorithm.binarySearch(5, array, 0, array.length));
     }
 }

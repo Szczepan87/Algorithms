@@ -60,9 +60,7 @@ public class SimpleAlgorithm {
     }
 
     static boolean binarySearch(double element, double arr[], int start, int end) {
-        Arrays.sort(arr);
-
-        int half = (start + end) / 2;
+        int half = (start + end) / 2 + 1;
 
         while (start < end) {
             if (arr[half] == element)
