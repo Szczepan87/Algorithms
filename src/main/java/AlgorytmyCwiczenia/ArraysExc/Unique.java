@@ -14,8 +14,6 @@ public class Unique {
         double unique = 0;
         int counter = 0;
 
-        //List<Double> doubleList =new ArrayList<Double>(Arrays.asList(arr));
-
         for (int i = 0; i < arr.length; i++) {
 
             if (Arrays.asList(arr).contains(arr[i]))
