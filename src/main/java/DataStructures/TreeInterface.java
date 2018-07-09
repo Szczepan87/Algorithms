@@ -2,9 +2,13 @@ package DataStructures;
 
 public interface TreeInterface {
 
-    BinaryTree put(int number);
+    void put(int number);
 
-    BinaryTree get(BinaryTree binaryTree);
+    int get();
+
+    BinaryTree getParrent();
+
+    BinaryTree getChildren();
 
     int size();
 
