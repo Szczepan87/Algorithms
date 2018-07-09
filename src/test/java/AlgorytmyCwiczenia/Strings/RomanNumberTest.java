@@ -17,6 +17,11 @@ public class RomanNumberTest {
     }
 
     @Test
+    public void LXtest() {
+        assertEquals(60,RomanNumber.toArabic("LX"));
+    }
+
+    @Test
     public void XCVtest() {
         assertEquals(95,RomanNumber.toArabic("XCV"));
     }

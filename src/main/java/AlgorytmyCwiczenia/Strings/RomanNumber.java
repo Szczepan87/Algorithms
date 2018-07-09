@@ -14,16 +14,22 @@ public class RomanNumber {
                     break;
                 case 'D':
                     result+= 500;
+                    break;
                 case 'C':
                     result+= 100;
+                    break;
                 case'L':
                     result+= 50;
+                    break;
                 case 'X':
                     result+= 10;
+                    break;
                 case 'V':
                     result+=5;
+                    break;
                 case 'I':
                     result+=1;
+                    break;
             }
         }
 
