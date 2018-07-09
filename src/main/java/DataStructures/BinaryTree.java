@@ -1,6 +1,6 @@
 package DataStructures;
 
-public class BinaryTree {
+public class BinaryTree implements TreeInterface{
 
     private BinaryTree rightChild;
     private BinaryTree leftChild;
@@ -13,6 +13,41 @@ public class BinaryTree {
     }
 
     public boolean isRoot(){
+
+    }
+
+    @Override
+    public void put(int number) {
+
+    }
+
+    @Override
+    public int get() {
+        return 0;
+    }
+
+    @Override
+    public BinaryTree getParrent() {
+        return null;
+    }
+
+    @Override
+    public BinaryTree getChildren() {
+        return null;
+    }
+
+    @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
+    public int hight() {
+        return 0;
+    }
+
+    @Override
+    public boolean isRoot(BinaryTree binaryTree) {
         return leftChild == null && rightChild == null;
     }
 }
