@@ -9,29 +9,36 @@ public class RomanNumber {
 
         for (int i = 0; i < romanNumber.toCharArray().length; i++) {
             switch (romanNumber.toCharArray()[i]) {
-                case'M':
-                    result+= 1000;
+                case 'M':
+                    result += 1000;
                     break;
                 case 'D':
-                    result+= 500;
+                    result += 500;
                     break;
                 case 'C':
-                    result+= 100;
+                    result += 100;
                     break;
-                case'L':
-                    result+= 50;
+                case 'L':
+                    result += 50;
                     break;
                 case 'X':
-                    result+= 10;
+                    result += 10;
                     break;
                 case 'V':
-                    result+=5;
+                    result += 5;
                     break;
                 case 'I':
-                    result+=1;
+                    result += 1;
                     break;
             }
         }
+
+        if (romanNumber.contains("IV") || romanNumber.contains("IX"))
+            result--;
+        else if (romanNumber.contains("XL") || romanNumber.contains("XC") || romanNumber.contains("XD") || romanNumber.contains("XM"))
+            result -= 10;
+        else if (romanNumber.contains("CD") || romanNumber.contains("CM"))
+            result -= 100;
 
         return result;
     }
