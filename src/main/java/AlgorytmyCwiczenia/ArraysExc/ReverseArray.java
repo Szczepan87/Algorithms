@@ -5,6 +5,8 @@ public class ReverseArray {
     private int[] arr;
     private int firstToLast;
     private int temp;
+    private char letter;
+    private char[] word;
 
     public int[] notUsingLoop(int[] arr) {
 
@@ -23,5 +25,25 @@ public class ReverseArray {
 
         notUsingLoop(this.arr);
         return arr;
+    }
+
+    public String notUsingLoop(String string) {
+
+        if (string.length() <= 1)
+            return string;
+
+        this.word = string.toCharArray();
+
+        letter = this.word[firstToLast];
+        this.word[firstToLast] = string.charAt(string.length() - 1 - firstToLast);
+        word[string.length() -1 - firstToLast] = letter;
+        firstToLast++;
+
+        if (firstToLast == string.length()/2)
+            return string;
+
+        notUsingLoop(String.valueOf(word));
+
+        return string;
     }
 }

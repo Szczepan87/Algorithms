@@ -35,7 +35,7 @@ public class SumDigPowerTest {
 
     @Test
     public void ninetyTo150Test() {
-        testing(90, 150, new long[] {135});
+        testing(140, 150, new long[] {135});
     }
 
     @Test
