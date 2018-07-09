@@ -1,4 +1,4 @@
-package AlgorytmyCwiczenia;
+package AlgorytmyCwiczenia.Strings;
 
 public class DuplicateEncoder {
 

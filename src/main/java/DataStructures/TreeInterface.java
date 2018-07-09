@@ -6,13 +6,13 @@ public interface TreeInterface {
 
     int get();
 
-    BinaryTree getParrent();
+    BinaryTree getParent();
 
     BinaryTree getChildren();
 
     int size();
 
-    int hight();
+    int height();
 
     boolean isRoot(BinaryTree binaryTree);
 }

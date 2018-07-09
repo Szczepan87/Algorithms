@@ -1,5 +1,6 @@
-package AlgorytmyCwiczenia;
+package AlgorytmyCwiczenia.Strings;
 
+import AlgorytmyCwiczenia.Strings.ShoeFactory;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

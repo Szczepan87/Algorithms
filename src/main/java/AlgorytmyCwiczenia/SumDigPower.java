@@ -16,7 +16,7 @@ public class SumDigPower {
                 result.add(number);
 
             for (int i = 0; i < String.valueOf(number).toCharArray().length; i++) {
-                sum += Math.pow(String.valueOf(number).toCharArray()[i], i + 1);
+                sum += Math.pow(String.valueOf(number).toCharArray()[i], i + 1);// brak metody toString, cyfra nie jest odczytywana
             }
 
             if (sum == number)

@@ -1,4 +1,4 @@
-package AlgorytmyCwiczenia;
+package AlgorytmyCwiczenia.Strings;
 
 public class MiddleLetters {
     public static String getMiddle(String word) {

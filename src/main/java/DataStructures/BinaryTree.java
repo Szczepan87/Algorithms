@@ -12,10 +12,6 @@ public class BinaryTree implements TreeInterface{
         this.number = number;
     }
 
-    public boolean isRoot(){
-
-    }
-
     @Override
     public void put(int number) {
 
@@ -27,7 +23,7 @@ public class BinaryTree implements TreeInterface{
     }
 
     @Override
-    public BinaryTree getParrent() {
+    public BinaryTree getParent() {
         return null;
     }
 
@@ -42,7 +38,7 @@ public class BinaryTree implements TreeInterface{
     }
 
     @Override
-    public int hight() {
+    public int height() {
         return 0;
     }
 
