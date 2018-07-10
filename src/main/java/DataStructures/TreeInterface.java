@@ -8,7 +8,7 @@ public interface TreeInterface {
 
     BinaryTree getParent();
 
-    BinaryTree getChildren();
+    BinaryTree[] getChildren();
 
     int size();
 

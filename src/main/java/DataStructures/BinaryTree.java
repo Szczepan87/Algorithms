@@ -28,8 +28,8 @@ public class BinaryTree implements TreeInterface{
     }
 
     @Override
-    public BinaryTree getChildren() {
-        return null;
+    public BinaryTree[] getChildren() {
+        return new BinaryTree[]{rightChild, leftChild};
     }
 
     @Override
