@@ -42,4 +42,9 @@ public class RomanNumber {
 
         return result;
     }
+
+    public static String fromArabic(int arabicNumber) {
+
+        return null;
+    }
 }
