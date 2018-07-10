@@ -56,5 +56,10 @@ public class RomanNumberTest {
         assertEquals("MMMDCCCLXXXVIII",RomanNumber.fromArabic(3888));
     }
 
+    @Test
+    public void testFor9() {
+        assertEquals("IX",RomanNumber.fromArabic(9));
+    }
+
 
 }

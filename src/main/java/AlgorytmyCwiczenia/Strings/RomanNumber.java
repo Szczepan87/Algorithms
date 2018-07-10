@@ -48,17 +48,80 @@ public class RomanNumber {
         if (arabicNumber < 1 || arabicNumber > 10000)
             return "Numer nie może być większy niż 10000 i mniejszy niż 1.";
 
-        int result = 0;
-        int divider = 10;
-        while (divider < 10000) {
-            result = arabicNumber % divider;
+        String result = "";
+        if (arabicNumber % 10 != 0)
+            result += lastDigit(arabicNumber % 10);
+        else if (arabicNumber % 100 != 0)
+            result += secondToLastDigit(arabicNumber % 100);
+        else if (arabicNumber % 1000 != 0)
+            result += hundredsDigit(arabicNumber % 1000);
+        else if (arabicNumber % 10000 != 0)
+            result += thousandsDigit(arabicNumber % 10000);
 
-            lastDigit(result);
+        result = new StringBuilder(result).reverse().toString();
 
-            divider *= 10;
+        return result;
+
+    }
+
+    private static String thousandsDigit(int digit) {
+        String string = "";
+
+        for (int i = 0; i <= digit; i++) {
+            string += "M";
         }
 
-        return null;
+        return string;
+    }
+
+    private static String hundredsDigit(int digit) {
+
+        String string = "";
+        if (digit >= 1 && digit <= 3) {
+            while (digit > 1) {
+                string += "C";
+                digit--;
+            }
+        } else if (digit == 4)
+            return string += "CD";
+        else if (digit == 5)
+            return string += "D";
+        else if (digit > 5 && digit < 9) {
+            string = "D";
+            while (digit > 5) {
+                string += "C";
+                digit--;
+            }
+        }
+        if (digit == 9)
+            return string += "CM";
+        return string;
+    }
+
+    private static String secondToLastDigit(int digit) {
+
+        String string = "";
+        if (digit >= 1 && digit <= 3) {
+            while (digit > 1) {
+                string += "X";
+                digit--;
+            }
+        } else if (digit == 4)
+            return string += "XL";
+        else if (digit == 5)
+            return string += "L";
+        else if (digit > 5 && digit < 9) {
+            string = "L";
+            while (digit > 5) {
+                string += "X";
+                digit--;
+            }
+        }
+        if (digit == 9)
+            return string += "XC";
+        return string;
+
+
     }
 
     private static String lastDigit(int digit) {
