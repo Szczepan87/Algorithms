@@ -36,9 +36,9 @@ public class RomanNumber {
         if (romanNumber.contains("IV") || romanNumber.contains("IX"))
             result--;
         else if (romanNumber.contains("XL") || romanNumber.contains("XC") || romanNumber.contains("XD") || romanNumber.contains("XM"))
-            result -= 10;
+            result -= 20;
         else if (romanNumber.contains("CD") || romanNumber.contains("CM"))
-            result -= 100;
+            result -= 200;
 
         return result;
     }
