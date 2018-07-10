@@ -14,7 +14,7 @@ public class ShoeFactoryTest {
 
     @Test
     public void gapTest1() {
-        assertEquals(0,ShoeFactory.gap("RLRLRLRLRLRLRLRLR"));
+        assertEquals(0,ShoeFactory.gap("RLRLRLRLRLRLRLRL"));
     }
 
     @Test
@@ -24,6 +24,6 @@ public class ShoeFactoryTest {
 
     @Test
     public void gapTest3() {
-        assertEquals(1,ShoeFactory.gap("LLRLRLRLRLRR"));
+        assertEquals(2,ShoeFactory.gap("LLRLRLRLRLRR"));
     }
 }
