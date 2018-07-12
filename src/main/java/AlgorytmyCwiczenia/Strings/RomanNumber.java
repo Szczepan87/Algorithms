@@ -50,13 +50,19 @@ public class RomanNumber {
 
         String result = "";
         if (String.valueOf(arabicNumber).length() == 4) {
-            thousandsDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
-        } else if (arabicNumber % 1000 != 0) {
-            hundredsDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
-        } else if (arabicNumber % 100 != 0) {
-            secondToLastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
-        } else if (arabicNumber % 10 != 0) {
-            lastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+            result += thousandsDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+            result += hundredsDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(1)));
+            result += secondToLastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(2)));
+            result += lastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(3)));
+        } else if (String.valueOf(arabicNumber).length() == 3) {
+            result += hundredsDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+            result += secondToLastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(1)));
+            result += lastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(2)));
+        } else if (String.valueOf(arabicNumber).length() == 2) {
+            result += secondToLastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+            result += lastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(1)));
+        } else if (String.valueOf(arabicNumber).length() == 1) {
+            result += lastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
         }
 
 
@@ -69,7 +75,7 @@ public class RomanNumber {
     private static String thousandsDigit(int digit) {
         String string = "";
 
-        for (int i = 0; i <= digit; i++) {
+        for (int i = 0; i < digit; i++) {
             string += "M";
         }
 
