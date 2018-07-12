@@ -49,16 +49,18 @@ public class RomanNumber {
             return "Numer nie może być większy niż 10000 i mniejszy niż 1.";
 
         String result = "";
-        if (arabicNumber % 10 != 0)
-            result += lastDigit(arabicNumber % 10);
-        else if (arabicNumber % 100 != 0)
-            result += secondToLastDigit(arabicNumber % 100);
-        else if (arabicNumber % 1000 != 0)
-            result += hundredsDigit(arabicNumber % 1000);
-        else if (arabicNumber % 10000 != 0)
-            result += thousandsDigit(arabicNumber % 10000);
+        if (String.valueOf(arabicNumber).length() == 4) {
+            thousandsDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+        } else if (arabicNumber % 1000 != 0) {
+            hundredsDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+        } else if (arabicNumber % 100 != 0) {
+            secondToLastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+        } else if (arabicNumber % 10 != 0) {
+            lastDigit(Character.getNumericValue(String.valueOf(arabicNumber).charAt(0)));
+        }
 
-        result = new StringBuilder(result).reverse().toString();
+
+        //result = new StringBuilder(result).reverse().toString();
 
         return result;
 
