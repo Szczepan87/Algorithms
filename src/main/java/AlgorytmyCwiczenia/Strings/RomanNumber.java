@@ -86,7 +86,7 @@ public class RomanNumber {
 
         String string = "";
         if (digit >= 1 && digit <= 3) {
-            while (digit > 1) {
+            while (digit >= 1) {
                 string += "C";
                 digit--;
             }
@@ -110,7 +110,7 @@ public class RomanNumber {
 
         String string = "";
         if (digit >= 1 && digit <= 3) {
-            while (digit > 1) {
+            while (digit >= 1) {
                 string += "X";
                 digit--;
             }
@@ -135,7 +135,7 @@ public class RomanNumber {
     private static String lastDigit(int digit) {
         String string = "";
         if (digit >= 1 && digit <= 3) {
-            while (digit > 1) {
+            while (digit >= 1) {
                 string += "I";
                 digit--;
             }
