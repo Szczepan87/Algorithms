@@ -128,8 +128,6 @@ public class RomanNumber {
         if (digit == 9)
             return string += "XC";
         return string;
-
-
     }
 
     private static String lastDigit(int digit) {
