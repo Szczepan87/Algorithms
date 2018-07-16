@@ -14,7 +14,10 @@ public class MinimumMissing {
 
         for (int i = 0; i < A.length; i++) {
 
-            if (A[i] + 1 == A[i + 1]) { //przekroczenie indeksu tabliczy
+            if (A[i]<0)
+                return 1;
+
+            if (i<A.length-1 && A[i] + 1 == A[i + 1]) {
                 if (i == A.length -1) {
                     searched = A[A.length - 1] + 1;
                     break;
