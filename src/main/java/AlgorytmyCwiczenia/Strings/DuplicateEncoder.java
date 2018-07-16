@@ -8,9 +8,10 @@ public class DuplicateEncoder {
 
     static String encode(String word) {
 
-        char[] encoded = word.toCharArray();
+        char[] encoded = word.toLowerCase().toCharArray();
 
-
+        // ostatni znak zawsze jest rozpoznawany jako unikalny
+        // gdy dwie litery są obok siebie, to ta druga jest jako unikalna
         for (int i = 0; i < encoded.length; i++) {
             boolean isSameLetter = false;
 
@@ -21,8 +22,9 @@ public class DuplicateEncoder {
                     break;
                 }
             }
-            if(isSameLetter)
+            if(isSameLetter){
                 encoded[i] = ')';
+            }
             else encoded[i] = '(';
         }
 

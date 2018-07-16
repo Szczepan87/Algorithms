@@ -19,7 +19,7 @@ public class DuplicateEncoderTest {
 
     @Test
     public void almostEveryOtherSameLong() {
-        assertEquals(")()())()(()()(", DuplicateEncoder.encode("Prespecialized"));
+        assertEquals("(()())()(()()(", DuplicateEncoder.encode("Prespecialized"));
     }
 
     @Test
