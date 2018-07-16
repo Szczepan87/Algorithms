@@ -12,15 +12,21 @@ public class Unique {
     public static double find(double[] arr) {
 
         double unique = 0;
-        int counter = 0;
+        boolean sameNumber = false;
 
         for (int i = 0; i < arr.length; i++) {
 
-            if (Arrays.asList(arr).contains(arr[i]))
-                counter++;
-            if (counter<1)
-                continue;
-            else unique = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    sameNumber = true;
+                    break;
+                }
+            }
+            if (!sameNumber) {
+                unique = arr[i];
+                break;
+            }
+
         }
         return unique;
     }

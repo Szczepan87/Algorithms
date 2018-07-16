@@ -12,6 +12,7 @@ public class DuplicateEncoder {
 
         // ostatni znak zawsze jest rozpoznawany jako unikalny
         // gdy dwie litery są obok siebie, to ta druga jest jako unikalna
+
         for (int i = 0; i < encoded.length; i++) {
             boolean isSameLetter = false;
 
