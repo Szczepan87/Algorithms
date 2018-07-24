@@ -25,4 +25,11 @@ public class WhereIsMyParent {
         text = list.toString().replace(", ","").replace("[", "").replace("]","");
         return text;
     }
+
+    static String findChildrenCodeWarsSolution(final String text) {
+        String[] sorted = text.split("");
+        Arrays.sort(sorted);
+        Arrays.sort(sorted, String.CASE_INSENSITIVE_ORDER);
+        return String.join("", sorted);
+    }
 }
