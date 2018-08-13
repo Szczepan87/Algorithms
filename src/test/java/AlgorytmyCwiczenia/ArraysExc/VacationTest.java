@@ -9,7 +9,7 @@ public class VacationTest {
     @Test
     public void testStandard() {
         int[] trip = new int[]{1,1,4,5,3,2,5};
-        assertEquals(4,Vacation.shortTrip(trip));
+        assertEquals(5,Vacation.shortTrip(trip));
     }
 
     @Test

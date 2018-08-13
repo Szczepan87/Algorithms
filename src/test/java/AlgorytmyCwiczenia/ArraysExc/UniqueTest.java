@@ -27,6 +27,6 @@ public class UniqueTest {
     @Test
     public void findNothingInArr() {
         double[] test = new double[]{1,0,2,3,4,0.33};
-        assertEquals(0.0, Unique.find(test),0.01);
+        assertEquals(1.0, Unique.find(test),0.01);
     }
 }
