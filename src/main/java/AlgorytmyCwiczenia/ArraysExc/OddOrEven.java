@@ -5,13 +5,11 @@ public class OddOrEven {
     public static String oddOrEven (int[] array) {
 
         int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum+= array[i];
+        for (int element : array) {
+            sum += element;
         }
 
-        if (sum%2 !=0)
-            return "odd";
-        else return "even";
+        return sum % 2 != 0 ? "odd" : "even";
     }
 
 }
