@@ -18,8 +18,8 @@ public class RepeatedStringTest {
         assertEquals(4, repeatedString.repeatedString(10, "abcac"),0.01);
     }
 
-//    @Test
-//    public void test3() {
-//        assertEquals( 1000000000000, repeatedString.repeatedString(1000000000000, "a"));
-//    }
+    @Test
+    public void test3() {
+        assertEquals( 1000000000000, repeatedString.repeatedString(1000000000000, "a"));
+    }
 }

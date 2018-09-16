@@ -14,8 +14,6 @@ public class RepeatedString {
                 count++;
         }
 
-
         return BigDecimal.valueOf(count).divide(BigDecimal.valueOf(s.length())).multiply(n);
-
     }
 }
