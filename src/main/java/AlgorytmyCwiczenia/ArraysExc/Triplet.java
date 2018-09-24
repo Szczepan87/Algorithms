@@ -3,6 +3,7 @@ package AlgorytmyCwiczenia.ArraysExc;
 import java.util.ArrayList;
 import java.util.List;
 
+/**Z dwóch list wyników podaje rezultat puntów.*/
 public class Triplet {
     public List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
 

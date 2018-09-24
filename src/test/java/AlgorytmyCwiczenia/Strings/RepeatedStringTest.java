@@ -20,6 +20,6 @@ public class RepeatedStringTest {
 
     @Test
     public void test3() {
-        assertEquals( 1000000000000, repeatedString.repeatedString(1000000000000, "a"));
+        assertEquals( 588525, repeatedString.repeatedString(882787, "aab"));
     }
 }
