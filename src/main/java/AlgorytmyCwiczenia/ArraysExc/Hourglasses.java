@@ -12,7 +12,6 @@ public class Hourglasses {
      *   N
      * N N N*/
     static int hourglassSum(int[][] arr) {
-        //TODO
         int hourglassSum;
         List<Integer> sums = new ArrayList<>();
 
