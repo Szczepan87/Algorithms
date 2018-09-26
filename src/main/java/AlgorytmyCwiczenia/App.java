@@ -10,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        HookedOnAFeeling.sing(2000);
+        System.out.println(Starircase.staircase(6));
 
     }
 }
