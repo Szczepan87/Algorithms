@@ -17,7 +17,8 @@ public class Starircase {
                 s += "#";
             }
 
-            s += "\n";
+            if (row<n-1)
+                s += "\n";
         }
 
         return s;

@@ -1,6 +1,7 @@
 package AlgorytmyCwiczenia;
 
-import AlgorytmyCwiczenia.Strings.HookedOnAFeeling;
+
+import AlgorytmyCwiczenia.ArraysExc.MinMaxOfFour;
 
 /**
  * Hello world!
@@ -10,7 +11,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println(Starircase.staircase(6));
-
+        MinMaxOfFour.miniMaxSum(new int[]{7, 69, 2, 221, 8974});
     }
 }
