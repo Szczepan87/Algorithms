@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**Zaokrągla procentowe oceny wg klucza ocena > 39 zaliczenie.
+/**Zaokrągla w górę procentowe oceny wg klucza ocena > 39 zaliczenie.
  * Zaokrągla do 5 jeśli ocena nie wymaga dodania więcej niż 2. */
 public class RoundingTest {
 
