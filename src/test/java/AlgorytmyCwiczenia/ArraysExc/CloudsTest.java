@@ -22,4 +22,9 @@ public class CloudsTest {
     public void jumpingCloudsTest3() {
         assertEquals(4, clouds.jumpingOnClouds(new int[]{0, 0, 1, 0, 0, 1, 0}));
     }
+
+    @Test
+    public void name() {
+        assertEquals(92, Clouds.jumpingOnClouds(new int[]{0, 0, 1, 0, 0, 1, 1, 0}, 2));
+    }
 }

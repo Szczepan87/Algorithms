@@ -20,4 +20,21 @@ public class Clouds {
         }
         return jumps-1;
     }
+
+    /**
+     * Przyjmuję tablicę 0 i 1, zwraca ilość punktów energii po grze. Dystans skoku wynosi @Param{k} a początkowa ilość
+     * punktów energii wynosi 100.
+     */
+
+    //czas 10 min.
+    static int jumpingOnClouds(int[] c, int k) {
+        int energy = 100;
+
+        for (int i = 0; i < c.length; i+=k) {
+            if (c[i]!=0)
+                energy-=2;
+            energy--;
+        }
+        return energy;
+    }
 }
