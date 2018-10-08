@@ -10,11 +10,11 @@ public class RestaurantBill {
      * kwotę przez pierwsza osobę.*/
     //czas 14 min.
     static String bonAppetit(List<Integer> bill, int k, int b) {
-        bill.remove(k);
         int sum = 0;
 
         for (int i = 0; i < bill.size(); i++) {
-            sum+= bill.get(i);
+            if (i != k)
+                sum+= bill.get(i);
         }
 
         if ((sum/2)-b==0)
