@@ -4,16 +4,18 @@ package AlgorytmyCwiczenia.DataStructures;
 public class Stack {
     private int maxSize;
     private int size = 0;
-    int[] stack = new int[maxSize];
-
+    int[] stack;
     public Stack(int maxSize) {
         this.maxSize = maxSize;
+        stack = new int[maxSize];
+
     }
 
     public void push(int value) {
         if (size < maxSize) {
             for (int i = 0; i < stack.length; i++) {
                 stack[i] = stack[i + 1];
+                size++;
             }
             stack[0] = value;
         }
