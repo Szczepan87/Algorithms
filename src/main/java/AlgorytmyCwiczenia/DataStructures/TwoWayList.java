@@ -4,16 +4,23 @@ import java.util.Objects;
 
 public class TwoWayList {
 
-    private int size;
     private Element head;
     private Element tail;
+    private int size;
 
     public TwoWayList() {
         size = 0;
     }
 
     public void add(Object value){
-        Element e = new Element(value, head,null);
+        Element e = new Element(value, tail,null);
+        if (size == 0){
+            head = e;
+            tail = e;
+        } else {
+
+        }
+
         if (head!=null) head.next = e;
         head = e;
         if (tail==null) tail = e;
