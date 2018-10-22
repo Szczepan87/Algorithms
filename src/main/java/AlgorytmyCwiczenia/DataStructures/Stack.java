@@ -1,6 +1,6 @@
 package AlgorytmyCwiczenia.DataStructures;
 
-//FIFO
+//LIFO
 public class Stack {
     private int top = 0;
     private int[] stack;
@@ -26,13 +26,13 @@ public class Stack {
     }
 
     public int peek() {
-        return stack[top-1];
+        return stack[top - 1];
     }
 
     public String show() {
         StringBuilder s = new StringBuilder();
-        for (int number : stack) {
-            s.append(number).append(", ");
+        for (int i = 0; i < top; i++) {
+            s.append(stack[i]).append(", ");
         }
         return s.toString();
     }

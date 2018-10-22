@@ -42,6 +42,6 @@ public class StackTest {
         stack.push(1);
         stack.push(2);
         stack.push(3);
-        assertEquals("1, 2, 3, 0, 0, ",stack.show());
+        assertEquals("1, 2, 3, ",stack.show());
     }
 }
