@@ -2,41 +2,46 @@ package AlgorytmyCwiczenia.DataStructures;
 
 //FIFO
 public class Stack {
-    private int maxSize;
-    private int size = 0;
-    int[] stack;
+    private int top = 0;
+    private int[] stack;
+
     public Stack(int maxSize) {
-        this.maxSize = maxSize;
         stack = new int[maxSize];
 
     }
 
     public void push(int value) {
-        if (size < maxSize) {
-            for (int i = 0; i < stack.length; i++) {
-                stack[i] = stack[i + 1];
-                size++;
-            }
-            stack[0] = value;
-        }
+        if (top < stack.length) {
+            stack[top] = value;
+            top++;
+        } else System.out.println("Stack overflow!");
     }
 
     public int pop() {
-        int popped = 0;
         if (!isEmpty()) {
-            popped = stack[0];
-            for (int i = 1; i < stack.length; i++) {
-                stack[i - 1] = stack[i];
-            }
+            top--;
         }
+        int popped = stack[top];
         return popped;
     }
 
+    public int peek() {
+        return stack[top-1];
+    }
+
+    public String show() {
+        StringBuilder s = new StringBuilder();
+        for (int number : stack) {
+            s.append(number).append(", ");
+        }
+        return s.toString();
+    }
+
     public int size() {
-        return size;
+        return top;
     }
 
     public boolean isEmpty() {
-        return size == 0;
+        return top == 0;
     }
 }

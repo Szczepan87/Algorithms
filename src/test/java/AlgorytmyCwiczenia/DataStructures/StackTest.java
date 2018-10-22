@@ -23,6 +23,25 @@ public class StackTest {
 
     @Test
     public void popTest() {
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
         assertEquals(3,stack.pop());
+    }
+
+    @Test
+    public void peekTest() {
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        assertEquals(3,stack.peek());
+    }
+
+    @Test
+    public void showTest() {
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        assertEquals("1, 2, 3, 0, 0, ",stack.show());
     }
 }
