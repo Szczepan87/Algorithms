@@ -20,7 +20,7 @@ public class LinkedListTest {
         linkedList.add(2);
         linkedList.add(3);
         linkedList.add(4);
-        assertEquals("1, 2, 3, 4, ", linkedList.show());
+        assertEquals("4, 3, 2, 1, ", linkedList.show());
     }
 
     @Test
@@ -30,7 +30,7 @@ public class LinkedListTest {
         linkedList.add(3);
         linkedList.add(4);
         linkedList.removeFirst();
-        assertEquals("2, 3, 4, ", linkedList.show());
+        assertEquals("3, 2, 1, ", linkedList.show());
     }
 
     @Test
@@ -40,7 +40,7 @@ public class LinkedListTest {
         linkedList.add(3);
         linkedList.add(4);
         linkedList.remove(4);
-        assertEquals("1, 2, 3, ", linkedList.show());
+        assertEquals("3, 2, 1, ", linkedList.show());
     }
 
     @Test

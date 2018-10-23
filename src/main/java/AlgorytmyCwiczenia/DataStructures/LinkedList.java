@@ -49,7 +49,7 @@ public class LinkedList {
             s.append(link.getValue()).append(", ");
             link = link.next;
         }
-
+        s.append(link.getValue()).append(", ");
         return s.toString();
     }
 
@@ -57,13 +57,10 @@ public class LinkedList {
         Link link = first;
 
         if (isNotEmpty()) {
-            while (link.getValue() != value) {
-
-                if (link.next.getValue() == value) {
-                    return true;
-                } else {
-                    link = link.next;
-                }
+            while (true) {
+                if (link.getValue() == value) return true;
+                if (link.next == null) break;
+                link = link.next;
             }
         } else {
             System.out.println("Empty list!");
