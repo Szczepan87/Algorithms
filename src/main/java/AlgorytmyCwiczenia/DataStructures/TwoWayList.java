@@ -1,77 +1,102 @@
 package AlgorytmyCwiczenia.DataStructures;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.util.Objects;
 
 public class TwoWayList {
 
     private Element head;
     private Element tail;
+    private int index;
     private int size;
 
     public TwoWayList() {
         size = 0;
+        index = 0;
+        head = null;
+        tail = null;
     }
 
-    public void add(Object value){
-        Element e = new Element(value, tail,null);
-        if (size == 0){
-            head = e;
-            tail = e;
+    public void addAtFront(int value){
+        Element element = new Element(index,value);
+        if (isEmpty()){
+            tail = element;
         } else {
-
+            head.previous = element;
         }
+        element.next = head;
+        head = element;
 
-        if (head!=null) head.next = e;
-        head = e;
-        if (tail==null) tail = e;
+        index++;
         size++;
+        throw new NotImplementedException();
     }
 
-    public void delete(Object value){
+    public void add(int value){
+        Element element = new Element(index,value);
 
-        if(size==0) return;
-        Element checking = head;
-        while (checking != null){
-            if (checking.value.equals(value)){
-
-            }
+        if (isEmpty()){
+            head = element;
+        }else {
+            tail.next = element;
+            element.previous = tail;
         }
-        size--;
+        tail = element;
+    }
+
+    public void deleteAtIndex(int index){
+        throw new NotImplementedException();
+    }
+
+    public void delete(int value){
+        throw new NotImplementedException();
     }
 
     public boolean contains(Object value){
-        Element checking = head;
-        while (checking != null){
-            if (checking.value.equals(value)){
-                return true;
-            }
-            checking = checking.next;
-        }
-        return false;
+        throw new NotImplementedException();
     }
 
     public void clear(){
-        size = 0;
+        throw new NotImplementedException();
+    }
+
+    public void show(){
+        Element element = head;
+        while (element!=null){
+            System.out.println(element.toString());
+            element = element.next;
+        }
     }
 
     public int size(){
         return size;
     }
 
-    public boolean isEmty(){
+    public boolean isEmpty(){
         return size == 0;
     }
 
-    class Element{
+    class Element {
 
-        private Object value;
-        private Element previous;
-        private Element next;
+        private int index;
+        private int value;
+        Element previous;
+        Element next;
 
-        public Element(Object value, Element previous, Element next) {
+        public Element(int index, int value) {
+            this.index = index;
             this.value = value;
-            this.previous = previous;
-            this.next = next;
+        }
+
+        @Override
+        public String toString() {
+            return "Element{" +
+                    "index=" + index +
+                    ", value=" + value +
+                    ", previous=" + previous +
+                    ", next=" + next +
+                    '}';
         }
 
         @Override
@@ -79,14 +104,15 @@ public class TwoWayList {
             if (this == o) return true;
             if (!(o instanceof Element)) return false;
             Element element = (Element) o;
-            return value == element.value &&
-                    previous == element.previous &&
-                    next == element.next;
+            return index == element.index &&
+                    Objects.equals(value, element.value) &&
+                    Objects.equals(previous, element.previous) &&
+                    Objects.equals(next, element.next);
         }
+
         @Override
         public int hashCode() {
-            return Objects.hash(value, previous, next);
+            return Objects.hash(index, value, previous, next);
         }
     }
-
 }
