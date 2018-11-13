@@ -1,7 +1,5 @@
 package AlgorytmyCwiczenia.DataStructures;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.Objects;
 
 public class TwoWayList {
@@ -30,7 +28,6 @@ public class TwoWayList {
 
         index++;
         size++;
-        throw new NotImplementedException();
     }
 
     public void add(int value){
@@ -46,19 +43,17 @@ public class TwoWayList {
     }
 
     public void deleteAtIndex(int index){
-        throw new NotImplementedException();
     }
 
     public void delete(int value){
-        throw new NotImplementedException();
     }
 
     public boolean contains(Object value){
-        throw new NotImplementedException();
+        return true;
     }
 
     public void clear(){
-        throw new NotImplementedException();
+
     }
 
     public void show(){
