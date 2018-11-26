@@ -2,6 +2,7 @@ package AlgorytmyCwiczenia.DesignPatterns.Adapter;
 
 import java.util.Random;
 
+// nowa klasa różniąca się funkcją od "klasycznego" Attackera
 public class Drone {
 
     private Random random = new Random();

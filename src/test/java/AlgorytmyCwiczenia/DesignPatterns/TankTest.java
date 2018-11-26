@@ -1,5 +1,6 @@
 package AlgorytmyCwiczenia.DesignPatterns;
 
+import AlgorytmyCwiczenia.DesignPatterns.Adapter.Tank;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

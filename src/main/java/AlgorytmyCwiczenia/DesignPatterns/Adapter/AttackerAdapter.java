@@ -1,5 +1,6 @@
 package AlgorytmyCwiczenia.DesignPatterns.Adapter;
 
+//adapter pozwalający na używanie klasy Drone jak zwykłego Attackera
 public class AttackerAdapter implements Attacker{
 
     private Drone drone;

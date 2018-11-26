@@ -1,9 +1,9 @@
-package AlgorytmyCwiczenia.DesignPatterns;
+package AlgorytmyCwiczenia.DesignPatterns.Adapter;
 
-import AlgorytmyCwiczenia.DesignPatterns.Adapter.Attacker;
 
 import java.util.Random;
 
+//podstawowa klasa korzystająca z interface Attacker
 public class Tank implements Attacker {
 
     private String name;
